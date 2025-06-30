@@ -44,7 +44,7 @@ Criar uma API REST em Node.js que simula um pipeline ETL (Extract, Transform, Lo
 /etl-api  
 
 │
-├── /uploads # CSVs enviados  
+├── /uploads # CSVs enviados  <br>
 
 ├── /controllers # Lógica dos endpoints  
 
@@ -59,3 +59,7 @@ Criar uma API REST em Node.js que simula um pipeline ETL (Extract, Transform, Lo
 ├── app.js  
 
 └── server.js
+
+---
+
+
