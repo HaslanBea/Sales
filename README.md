@@ -174,10 +174,6 @@ npx nodemon app.js
 
 ## ✨ Quais endpoints ainda faltam?
 
-**Hoje você só tem:**
-- POST `/autores`
-- POST `/livros`
-
 Para ter **CRUD completo**, você pode criar estes:
 
 | Método | Rota               | Descrição                           |
@@ -189,5 +185,29 @@ Para ter **CRUD completo**, você pode criar estes:
 | PUT    | /livros/:id        | Atualizar um livro                 |
 | DELETE | /autores/:id       | Excluir um autor                   |
 | DELETE | /livros/:id        | Excluir um livro                   |
+
+---
+# 🎯 Resumo do que temos agora
+## ✅ Tabela Autores
+
+- Criar autor (POST)
+
+- Listar todos os autores (GET)
+
+- Atualizar autor (PUT)
+
+- Deletar autor (DELETE)
+
+## ✅ Tabela Livros
+
+- Criar livro (POST)
+
+- Listar todos os livros (GET /livros)
+
+- Buscar um livro por ID (GET /livros/:id)
+
+- Atualizar livro (PUT /livros/:id)
+
+- Deletar livro (DELETE /livros/:id)
 
 ---
