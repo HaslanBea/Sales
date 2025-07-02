@@ -52,4 +52,27 @@ router.post('/', (req, res) => {
   });
 });
 
+// GET /livros - Listar livros
+router.get('/', (req, res) => {
+  const db = new sqlite3.Database('./database.db');
+
+  const query = `
+    SELECT livros.*, autores.nome AS autor_nome
+    FROM livros
+    JOIN autores ON livros.autor_id = autores.id
+  `;
+  //A linha acima faz um JOIN entre as tabelas livros e autores para trazer o nome do autor junto com os dados do livro.
+
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Erro ao buscar livros.' });
+    }
+
+    return res.status(200).json(rows);
+  });
+
+  db.close();
+});
+
 module.exports = router;
